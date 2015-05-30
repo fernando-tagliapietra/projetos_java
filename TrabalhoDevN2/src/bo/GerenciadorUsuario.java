@@ -1,6 +1,5 @@
 package bo;
 
-import java.sql.SQLException;
 
 import dto.Usuario;
 import exceptions.CampoNuloException;
