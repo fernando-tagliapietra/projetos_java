@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head> 
+	<title>Venda</title>
+	
+</h:head>
+<h:body>
+
+	<div class="container">
+		<ui:include src="/view/master.xhtml" />
+		<h:form>
+		
+			<div class="row">
+				<div class="col-md-2">
+					<h:outputLabel> Nro Venda</h:outputLabel>
+				</div>
+				
+				<div class="col-md-2">
+					<h:inputText value="#{vendaMB.nroVenda}" class="form-control"/>
+				</div>
+			</div>
+			<br/>
+		
+			
+			<div class="row">
+				<div class="col-md-2">
+					<h:outputLabel> Cód. Produto</h:outputLabel>
+				</div>
+				
+				<div class="col-md-2">
+					<h:inputText value="#{vendaMB.codProduto}" class="form-control"/>
+				</div>
+			</div>
+			
+			<br/>
+			
+			<div class="row">
+				<div class="col-md-2">
+					<h:outputLabel> Valor </h:outputLabel>
+				</div>
+				<div class="col-md-2">
+					<h:inputText value="#{vendaMB.valor}" class="form-control"/>
+				</div>
+				
+			</div>
+			
+			<br/>
+			<div class="row">
+				<div class="col-md-2">
+					<h:outputLabel> Quantidade </h:outputLabel>
+				</div>
+				<div class="col-md-2">
+					<h:inputText value="#{vendaMB.quantidade}" class="form-control"/>
+				</div>
+				
+			</div>
+			
+			<br/>
+			<div class="row">
+				<div class="col-md-2">
+					<h:outputLabel> Desconto % </h:outputLabel>
+				</div>
+				<div class="col-md-2">
+					<h:inputText value="#{vendaMB.desconto}" class="form-control"/>
+				</div>
+				
+			</div>
+			
+			
+			<br/>
+			<br/>
+			<h:commandButton action="#{vendaMB.addVenda}" value="Gravar" class="btn btn-default"/>
+			
+			<br/>
+			<br/>
+			
+			<h:outputLabel value="Valor Pago: R$#{vendaMB.valorTotal} "> </h:outputLabel>
+			
+		</h:form>	
+		
+	</div>
+</h:body>
+</html>

@@ -10,10 +10,8 @@ import org.junit.Test;
 
 
 
-
-
-import BO.GerenciadorUsuario;
-import DTO.Usuario;
+import bo.GerenciadorUsuario;
+import dto.Usuario;
 import exceptions.CampoNuloException;
 import exceptions.SenhaInvalidException;
 
