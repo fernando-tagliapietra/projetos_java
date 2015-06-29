@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+<title>Welcome to the Login page</title>
+<h:outputStylesheet library="css" name="login.css"/>
+<h:outputScript library="javascript" name="jquery-2.1.4.min.js"/>
+<h:outputScript library="javascript" name="login.js"/> 
+</h:head>
+<h:body>
+	<h:form id="form-login" prependId="false">			
+		<div class="login-form">
+			<h:commandButton value="Login" id="button" action="#{sessionController.accesslogin}" class="button-form"/>      	    			
+			<h:outputLabel class="form-title">Please insert your credential</h:outputLabel>
+			<hr/>
+			<br/>
+			<table>
+				<tr>
+					<th><h:outputLabel>Login</h:outputLabel></th>
+					<th><h:outputLabel>Password</h:outputLabel></th>
+				</tr>
+				<tr>	
+					<td><h:inputText value="#{sessionController.login}" id="login" class="form-text user"/></td>		
+					<td><h:inputText value="#{sessionController.senha}" id="password" class="form-text password"/></td>
+				</tr>	
+			</table>
+		</div>						
+		<h:messages id="msgErro" class="message"></h:messages>
+		<h:outputText value="#{sessionController.messageError}"/>							
+	</h:form>
+</h:body>
+</html>

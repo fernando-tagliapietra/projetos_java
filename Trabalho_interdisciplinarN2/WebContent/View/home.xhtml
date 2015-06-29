@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+<title>Home Page</title>
+<h:outputStylesheet library="css" name="reset.css"/>
+<h:outputStylesheet library="css" name="dark.css"/>
+<h:outputScript library="javascript" name="jquery-2.1.4.min.js"/>
+<h:outputScript library="javascript" name="jquery.easing.min.js"/>
+<h:outputScript library="javascript" name="js/jquery.lavalamp.min.js"/>
+<script type="text/javascript">
+	$(function() {
+		 $("#one,#two,#three,#four,#five,#six,#seven,#eight").lavaLamp({
+			fx: "backout", 
+			speed: 700
+		 });
+	});
+</script> 
+</h:head>
+<h:body>
+<div id="wrapper">
+	<div class="darkmenu">
+	  <ul class="darkBlue" id="five">
+		<li><a href="#">Home</a></li>
+		<li><a href="#">About</a></li>
+		<li><a href="#">Portfolio</a></li>
+		<li class="current"><a href="#">Contact</a></li>
+		<li><a href="#">News</a></li>
+	  </ul>	  
+	</div>
+</div>	
+</h:body>
+</html>

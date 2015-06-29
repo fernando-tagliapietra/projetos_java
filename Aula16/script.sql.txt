@@ -1,0 +1,16 @@
+CREATE DATABASE dbJPA;
+
+use dbJPA;
+
+CREATE TABLE user (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  name varchar(20) DEFAULT NULL,
+  password varchar(20) DEFAULT NULL,
+  PRIMARY KEY (id)
+) ;
+ 
+INSERT INTO `user` (`id`, `name`, `password`) VALUES
+  (1,'root','root'),
+  (2,'us1','123'),
+  (3,'us2','1234');
+COMMIT;
